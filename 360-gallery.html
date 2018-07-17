@@ -30,9 +30,10 @@ https://glitch.com/~aframe-school-cursor-->
 			<script id="link" type="text/html">
 				<a-entity class="link" geometry="primitive: box; height: 1; width: 1; depth:.05" material="shader: flat; src: ${label}" sound="on:click; src: #click-sound" event-set__click="_event: mousedown; scale: 1 1 1" event-set__mouseUp="_event: mouseup; scale: 1.2 1.2 1"
 				 event-set__mouseEnter="_event: mouseenter; scale: 1.2 1.2 1;" event-set__mouseLeave="_event: mouseleave; scale: 1 1 1" set-image="on:click; target: #image-360; src: ${src} "></a-entity>
-				//I changed the primitive to a flat box because I couldn't get the planes to show behind the camera, maybe because it's flat, so no third dimension
-			</script>
+				</script>
       <script src="/360-gallery.js"></script>
+			<!--//I changed the primitive to a flat box because I couldn't get the planes to show behind the camera, maybe because it's flat, so no third dimension
+			-->
 		</a-assets>
 
 		<!-- 360-degree image. -->
