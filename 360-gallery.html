@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang= "en">
+<head>
+	<title>Charlotte Joy 360° Image Browser</title>
+  <meta charset = "UTF-8" />
+	<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+	<script src="https://unpkg.com/aframe-layout-component@3.x.x/dist/aframe-layout-component.min.js"></script>
+	<script src="https://unpkg.com/aframe-event-set-component@3.x.x/dist/aframe-event-set-component.min.js"></script>
+</head>
+
+<body>
+<!--Tutorial is here:https://aframe.io/docs/0.5.0/guides/building-a-360-image-gallery.html
+https://glitch.com/~aframe-school-cursor-->
+	<a-scene>
+		<a-assets>
+			<audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+
+			<!-- Images. -->
+
+			<img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
+			<img id="city-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
+			<img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
+			<img id="sechelt-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
+			<audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+			<img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
+			<img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+
+			<!-- Link we will build. -->
+			<script id="link" type="text/html">
+				<a-entity class="link" geometry="primitive: box; height: 1; width: 1; depth:.05" material="shader: flat; src: ${label}" sound="on:click; src: #click-sound" event-set__click="_event: mousedown; scale: 1 1 1" event-set__mouseUp="_event: mouseup; scale: 1.2 1.2 1"
+				 event-set__mouseEnter="_event: mouseenter; scale: 1.2 1.2 1;" event-set__mouseLeave="_event: mouseleave; scale: 1 1 1" set-image="on:click; target: #image-360; src: ${src} "></a-entity>
+				</script>
+      <script src="/360-gallery.js"></script>
+			<!--//I changed the primitive to a flat box because I couldn't get the planes to show behind the camera, maybe because it's flat, so no third dimension
+			-->
+		</a-assets>
+
+		<!-- 360-degree image. -->
+		<a-sky id="image-360" radius="10" src="#city"></a-sky>
+		<!--labels from our templates-->
+		<a-entity id="links-front" layout="layout:line; margin: 1.5" position="-1.5 1 -3">
+			<a-entity template="src: #link" data-src="#city" data-label="#city-thumb"></a-entity>
+			<a-entity template="src: #link" data-src="#cubes" data-label="#cubes-thumb"></a-entity>
+			<a-entity template="src: #link" data-src="#sechelt" data-label="#sechelt-thumb"></a-entity>
+		</a-entity>
+
+	
+
+		<a-entity layout="layout:line; margin :1.5" position="-1.5 1 3">
+
+			<a-entity template="src: #link" data-src="#city" data-label="#city-thumb"></a-entity>
+			<a-entity template="src: #link" data-src="#cubes" data-label="#cubes-thumb"></a-entity>
+			<a-entity template="src: #link" data-src="#sechelt" data-label="#sechelt-thumb"></a-entity>
+		
+		</a-entity>
+
+		<!-- Camera + Cursor. -->
+		<a-camera>
+			<a-cursor id="cursor">
+				<!--	<a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+				<a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>-->
+			</a-cursor>
+		</a-camera>
+
+	</a-scene>
+
+</body>
+</html>
