@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wikipedia Article Finder</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+  <!--looking at this now, I didn't take advantage of much of bootstrap. I didn't really need it here. consider removeing it, just using the button style, or use it more fully-->
+  <div class="container-fluid" id="everything">
+    <div class="col-xs-12">
+      <h1 id="welcome">Wikipedia Article Finder</h1>
+      <h2>What do you want to learn about?</h2>
+    </div>
+    <p>
+      <input type="text" id="searcher" autofocus placeholder="Search Term">
+    </p>
+    <p>
+      <button class="btn" id="beginSearch">Search</button>
+      <button class="btn" id="random"> Get a Random Article</button>
+    </p>
+    <div class="container-fluid content">
+    </div>
+    <div id="test">
+    </div>
+  </div>
+<script src="js/index.js"></script>
+</body>
+</html>
