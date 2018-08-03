@@ -35,10 +35,15 @@ $(document).ready(function () {
 
             $(".article-div").mouseenter(function () {
               $(".readmore", this).css("text-decoration", "underline");
+              $(".readmore a", this).css("background-color", "#B3E5FC");
+              $(".readmore a", this).css("box-shadow", "1px 2px 2px rgba(0, 0, 0, .29)");
+  
             });
 
             $(".article-div").mouseleave(function () {
               $(".readmore", this).css("text-decoration", "none");
+              $(".readmore a", this).css("background-color", "white");
+              $(".readmore a", this).css("box-shadow", "none");
             });
 
             $(".content").slideDown();
