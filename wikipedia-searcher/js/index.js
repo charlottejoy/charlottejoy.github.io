@@ -17,7 +17,7 @@ $(document).ready(function () {
 
 
         if (articles.hasOwnProperty("query") == false) {
-          $(".content").append("<div id='no-results' class='col-xs-12'><h2>No search results found, please try again</h2></div>");
+          $(".content").append("<div id='no-results' class='container'><h2>No search results found, please try again</h2></div>");
           $(".content").slideDown();
         } else {
           $("#welcome").hide();
@@ -25,26 +25,22 @@ $(document).ready(function () {
             //this gets the page ids (the value of properties within pages)
             // this is a nice to have alert(articles.query["pages"][x]["images"][0]["title"]);
 
-            $(".content").append("<div class='row article-div'><div class='col-xs-1'><h2 class='selected'>*</h2></div><a href='" +
-              articles.query["pages"][pageID]["fullurl"] +
-              "' target='blank'><div class='article-content col-xs-10'><p><b>" +
+            $(".content").append("<div class='article-div'><div class='article-content'><p><b>" +
               articles.query["pages"][pageID]["title"] +
               "</b></p><p>" +
               articles.query["pages"][pageID]["extract"] +
-              "</p><p class='readmore'>Click to learn more</p></div></a></div>");
-
-            $(".selected").hide();
+              "</p><p class='readmore'><a href='" +
+              articles.query["pages"][pageID]["fullurl"] +
+              "' target='blank'>Click to learn more</a></p></div></div>");
 
             $(".article-div").mouseenter(function () {
-              $("h2.selected", this).show();
-              $(".readmore", this).css("font-weight", "bold");
+              $(".readmore", this).css("text-decoration", "underline");
             });
 
             $(".article-div").mouseleave(function () {
-              $("h2.selected", this).hide();
-              $(".readmore", this).css("font-weight", "normal");
+              $(".readmore", this).css("text-decoration", "none");
             });
-            
+
             $(".content").slideDown();
           }
         }

@@ -1,39 +1,76 @@
-body,html{ background-color:#125372;}
-#everything{
+body,html{ 
+  background-color:#125372;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+*{
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.container{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align : center;
+  width: 100vw;
+}
+
+/*#everything{
+  justify-content: center;
   padding-top : 10px;
   padding-bottom : 100px;
-  background-color : #125372;
-  
-}
+  background-color :green;
+  height: 100%;
+  width: 100%;
+}*/
 
 #welcome{
   padding-top:100px;
   font-weight:600;
   color:#721223;
 }
-#searcher{
-  height:50px;
-	text-transform: uppercase;
-	padding: .5em;
-	width: 300px;
-  max-width: 90%;
-	font-weight: 600;
-  border: none;
+#intros{
+  text-align:center;
+  padding: 1em;
 }
-
+#inputs *{
+  border: none;
+  text-transform: uppercase;
+}
+#searcher{
+  min-height:50px;
+	padding: .5em;
+	font-weight: 600;
+  display: block;
+}
+#searcher, .container--buttons{
+  max-width: 600px;
+  width: 90%;
+}
 /*#beginSearch{
 }
 #random{
 }*/
-
+.container--buttons{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-around;
+  margin:20px 0;
+}
 .btn{
   background-color:#FE6835;
   color:white;
-	text-transform: uppercase;
 	padding :.5em;
-	font-weight: 900;
-  border-radius: 5%;
+  font-weight: 900;
+  min-height: 50px;
+  margin:5px 10px;
 }
 
 .content div{
@@ -42,28 +79,30 @@ body,html{ background-color:#125372;}
 }
 
 .article-content{
-  background-color:#BAE6F5;
   text-align:left;
+  margin: 1em;
 }
 
 .article-div{
   margin:10px;
+  width: 95vw;
+  max-width: 1200px;
+  background-color:#BAE6F5;
 }
 
-.article-content:hover{
+.article-div:hover{
  background-color:#F5C9BA; 
 }
 
-.content a:hover{
-  text-decoration:none;
+.content a{
+  font-weight: bold;
 }
 
 .content a:visited{
   color:grey;
-  text-decoration:none;
 }
 
-.selected{
+/*.selected{
   color:#FE6835;
   font-size:400%;
   margin-right:20px;
@@ -71,7 +110,7 @@ body,html{ background-color:#125372;}
   padding-bottom:0px;
   margin-top:-20px;
   margin-bottom:-20px;
-}
+}*/
 
 .readmore{
   text-align:right;
