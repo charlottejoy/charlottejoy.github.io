@@ -1,4 +1,3 @@
-/*Add drop-shadows to make like cards*/
 body,html{ 
   background-color:#03A9F4;
   min-height: 100%;
@@ -7,14 +6,17 @@ body,html{
   align-items: center;
   justify-content: center;
 }
+
 *{
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 a{
   text-decoration: none;
   color: black;
 }
+
 .container{ 
   display: flex;
   flex-direction: column;
@@ -23,18 +25,7 @@ a{
   width: 100vw;
 }
 
-/*#everything{
-  justify-content: center;
-  padding-top : 10px;
-  padding-bottom : 100px;
-  background-color :green;
-  height: 100%;
-  width: 100%;
-}*/
-
-#welcome{
-  padding-top:100px; 
-}
+/*TOP SECTION*/
 #intros{
   color: white;
   text-align:center;
@@ -43,6 +34,11 @@ a{
 #intros *{
   font-weight:200;
 }
+#welcome{
+  padding-top:100px; 
+}
+
+/*INPUTS*/
 #inputs *{
   border: none;
   text-transform: uppercase;
@@ -57,10 +53,6 @@ a{
   max-width: 600px;
   width: 90%;
 }
-/*#beginSearch{
-}
-#random{
-}*/
 .container--buttons{
   display: flex;
   flex-flow: row wrap;
@@ -77,16 +69,14 @@ a{
   box-shadow: 1px 2px 2px rgba(0, 0, 0, .29);
 }
 
+/*INFORMATION HOLDERS*/
 .content div{
   color:#212121;
   padding: 10px;
 }
-
 .article-content{
   text-align:left;
-  /*margin: 1em;*/
 }
-
 .article-div, #no-results{
   margin:10px;
   width: 95vw;
@@ -94,39 +84,16 @@ a{
   background-color:#ffffff;
   box-shadow: 1px 2px 2px rgba(0, 0, 0, .29);
 }
-
 .content a{
   font-weight: bold;
   padding: .5em;
 }
-/*.content a:hover{
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, .29);
-  
-}*/
-
 .content a:visited{
   color:#757575;
 }
-
-/*.selected{
-  color:#FE6835;
-  font-size:400%;
-  margin-right:20px;
-  padding-top:0px;
-  padding-bottom:0px;
-  margin-top:-20px;
-  margin-bottom:-20px;
-}*/
-
 .readmore{
   text-align:right;
 }
-
-/*#no-results{
-  background-color:white;
-  color:#212121;
-}*/
-
 li{
   text-align:left;
 }

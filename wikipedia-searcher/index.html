@@ -6,27 +6,28 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <!--looking at this now, I didn't take advantage of much of bootstrap. I didn't really need it here. consider removeing it, just using the button style, or use it more fully-->
-  <!--<div id="everything" class="container">-->
     <div id="intros">
       <h1 id="welcome">Wikipedia Article Finder</h1>
       <h2>What do you want to learn about?</h2>
     </div>
+
     <div class="container" id="inputs">
-      <!--<p>-->
       <input type="text" id="searcher" autofocus placeholder="Search Term">
-    <!--</p>-->
-    <div class="container--buttons">
-      <button class="btn" id="beginSearch">Search</button>
-      <button class="btn" id="random"> Get a Random Article</button>
+      <div class="container--buttons">
+        <button class="btn" id="beginSearch">Search</button>
+        <button class="btn" id="random"> Get a Random Article</button>
+      </div>
     </div>
-    </div>
+
     <div class="container content">
     </div>
-    <div id="test">
-    </div>
-  <!--</div>-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script src="js/index.js"></script>
+
+    <!--<div id="test">
+    </div>-->
+ <!-- previous version of jQuery used here <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>-->
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
