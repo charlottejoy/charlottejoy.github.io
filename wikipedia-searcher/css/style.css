@@ -33,13 +33,15 @@ a{
 }*/
 
 #welcome{
-  padding-top:100px;
-  font-weight:600;
+  padding-top:100px; 
 }
 #intros{
   color: white;
   text-align:center;
   padding: 1em;
+}
+#intros *{
+  font-weight:200;
 }
 #inputs *{
   border: none;
@@ -82,19 +84,15 @@ a{
 
 .article-content{
   text-align:left;
-  margin: 1em;
+  /*margin: 1em;*/
 }
 
-.article-div{
+.article-div, #no-results{
   margin:10px;
   width: 95vw;
   max-width: 1200px;
   background-color:#ffffff;
   box-shadow: 1px 2px 2px rgba(0, 0, 0, .29);
-}
-
-.article-div:hover{
- 
 }
 
 .content a{
@@ -124,10 +122,10 @@ a{
   text-align:right;
 }
 
-#no-results{
+/*#no-results{
   background-color:white;
   color:#212121;
-}
+}*/
 
 li{
   text-align:left;
